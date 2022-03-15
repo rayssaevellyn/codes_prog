@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="botao()">Clique aqui</button>
+    </br>
+    <button onclick="calcularidade()">Quantos anos eu terei no final de 2022? </button>
+
+</body>
+</html>
+    <script>
+        function botao() {
+            alert("parabéns você apertou no botão")
+            var a = Number(prompt("Digite a letra a"));
+            var b = Number(prompt("Digite digite a letra b"));
+            var c = Number(prompt("digite a letra c"));
+            var delta = (b * b) - 4 * a * c
+            var x1 = (-b + Math.sqrt(delta)) / 2 * a
+            var x2 = (-b - Math.sqrt(delta)) / 2 * a
+            var mensagem = "o resultado do x1 é: " + x1 + ", o resultado de x2 é: " + x2;
+            alert(mensagem)
+        }
+        function calcularidade() {
+            var anoNasc = Number(prompt("Digite ano que você nasceu!"));
+            var idade = 2022 - anoNasc;
+            var msg="No final de 2022 você terá " + idade + "anos.\n";
+            if (idade < 18) {
+                msg+="Portanto, é menor de idade\n";
+            }
+            else {
+                msg+="Portanto é maior de idade\n";
+            }
+            if (idade % 2 == 0) {
+                msg += " Sua idade é par";
+
+
+            }
+            else {
+                msg += "Sua idade é impar"
+            }
+            alert(msg)
+        }
+    </script>
